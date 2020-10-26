@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Angular6-CRUD app is running!');
+    expect(page.getTitleText()).toEqual('Angular-CRUD app is running!');
   });
 
   afterEach(async () => {

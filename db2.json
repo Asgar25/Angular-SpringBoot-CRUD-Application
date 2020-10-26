@@ -1,0 +1,284 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "Sachin Mar",
+      "contactPreference": "phone",
+      "email": "sachin@yahoo.com",
+      "phone": "9768334452",
+      "age": "35",
+      "skills": [
+        {
+          "skillName": "Tester",
+          "experienceInYears": 20,
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "Android",
+          "experienceInYears": 12,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "LINQ",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullName": "Naveen",
+      "contactPreference": "phone",
+      "email": "naveen@yahoo.com",
+      "phone": "9876452313",
+      "age": "43",
+      "skills": [
+        {
+          "skillName": "Automation",
+          "experienceInYears": 4,
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "HTML",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "LINQ",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullName": "Asgar Ali1",
+      "contactPreference": "phone",
+      "email": "asgara75@yahoo.com",
+      "phone": "1111",
+      "age": "35",
+      "skills": [
+        {
+          "skillName": "Java",
+          "experienceInYears": 2,
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "HTML",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "LINQ",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fullName": "Vinit Patil",
+      "contactPreference": "email",
+      "email": "vinit@yahoo.com",
+      "phone": "9978675431",
+      "age": "29",
+      "skills": [
+        {
+          "skillName": "Spring Boot",
+          "experienceInYears": 5,
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "JavaScript",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "Linux",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fullName": "Faisal",
+      "contactPreference": "email",
+      "email": "faisal@yahoo.com",
+      "phone": "9978675434",
+      "age": "30",
+      "skills": [
+        {
+          "skillName": "Advance Java",
+          "experienceInYears": 5,
+          "proficiency": "advanced"
+        },
+        {
+          "skillName": "HTML",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "AWS",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fullName": "Imran",
+      "contactPreference": "phone",
+      "email": "imran9969@yahoo.com",
+      "phone": "9768465606",
+      "age": "40",
+      "skills": [
+        {
+          "skillName": "AWS",
+          "experienceInYears": 10,
+          "proficiency": "advanced"
+        },
+        {
+          "skillName": "Jenkins",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "DevOps",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fullName": "Deepali",
+      "contactPreference": "phone",
+      "email": "deepali87@yahoo.com",
+      "phone": "9969067745",
+      "age": "21",
+      "skills": [
+        {
+          "skillName": "Core Java",
+          "experienceInYears": 2,
+          "proficiency": "beginner"
+        },
+        {
+          "skillName": "JavaScript",
+          "experienceInYears": 10,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "AWS",
+          "experienceInYears": 1,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fullName": "Akshay Patil",
+      "contactPreference": "phone",
+      "email": "akshay.patil@yahoo.com",
+      "phone": "7719345480",
+      "age": "45",
+      "skills": [
+        {
+          "skillName": "JavaScript",
+          "experienceInYears": 10,
+          "proficiency": "advanced"
+        },
+        {
+          "skillName": "C++",
+          "experienceInYears": 2,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "IOS",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fullName": "Shadab",
+      "contactPreference": "email",
+      "email": "shadab90@yahoo.com",
+      "phone": "9821682784",
+      "age": "50",
+      "skills": [
+        {
+          "skillName": "Java Support",
+          "experienceInYears": 6,
+          "proficiency": "advanced"
+        },
+        {
+          "skillName": "PL-SQL",
+          "experienceInYears": 10,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "Linux",
+          "experienceInYears": 3,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "fullName": "Sandeep",
+      "contactPreference": "email",
+      "email": "sandeep.ch@yahoo.com",
+      "phone": "8898216156",
+      "age": "65",
+      "skills": [
+        {
+          "skillName": "Spring Boot",
+          "experienceInYears": 10,
+          "proficiency": "advanced"
+        },
+        {
+          "skillName": "Angular",
+          "experienceInYears": 5,
+          "proficiency": "intermediate"
+        },
+        {
+          "skillName": "AWS",
+          "experienceInYears": 10,
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fullName": "Sam",
+      "contactPreference": "email",
+      "email": "sam@yahoo.com",
+      "phone": "11111",
+      "age": "30",
+      "skills": [
+        {
+          "skillName": "Java",
+          "experienceInYears": "10",
+          "proficiency": "advanced"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fullName": "XYZ",
+      "contactPreference": "phone",
+      "email": "mr.asgar99@yahoo.com",
+      "phone": "1111111",
+      "age": "50",
+      "skills": [
+        {
+          "skillName": "java",
+          "experienceInYears": "10",
+          "proficiency": "advanced"
+        }
+      ]
+    }
+  ]
+}

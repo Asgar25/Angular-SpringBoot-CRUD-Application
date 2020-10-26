@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular6-CRUD'`, () => {
+  it(`should have as title 'Angular-CRUD'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular6-CRUD');
+    expect(app.title).toEqual('Angular-CRUD');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Angular6-CRUD app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Angular-CRUD app is running!');
   });
 });

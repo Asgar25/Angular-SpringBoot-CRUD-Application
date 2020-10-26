@@ -1,0 +1,55 @@
+<div class="table-responsive">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" style="text-align: center;">Employee Management System</h3>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="search" class="col-sm-2" style="text-align: right;">Search By Name</label>
+        <div class="col-sm-6">
+          <input [(ngModel)]="searchValue"  type="text" class="form-control" />
+        </div>
+    </div>
+    <table class="table table-bordered" *ngIf="employees && employees.length">
+        <thead>
+            <tr class="bg-primary">
+                <th style="cursor: pointer;" (click)="sort('name')">
+                    Name
+                <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                    'fa-sort-asc': (column == 'name' && isDesc), 
+                    'fa-sort-desc': (column == 'name' && !isDesc) }" aria-hidden="true"> </i>
+                </th>
+                <th style="cursor: pointer;" (click)="sort('age')">
+                    Age
+                <i class="fa" [ngClass]="{'fa-sort': column != 'age', 
+                    'fa-sort-asc': (column == 'age' && isDesc), 
+                    'fa-sort-desc': (column == 'age' && !isDesc) }" aria-hidden="true"> </i>
+                </th>
+                <th style="cursor: pointer;" (click)="sort('department')">
+                    department
+                <i class="fa" [ngClass]="{'fa-sort': column != 'department', 
+                    'fa-sort-asc': (column == 'department' && isDesc), 
+                    'fa-sort-desc': (column == 'department' && !isDesc) }" aria-hidden="true"> </i>
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees | nameFilter:searchValue | orderBy: {property: column, direction: direction}">
+                <td>
+                    <a [routerLink]="['/details', employee.id]">
+                        {{ employee.name }}
+                    </a>
+                </td>
+                <td>{{ employee.age }}</td>
+                <td>{{ employee.department }}</td>
+                <td> <button class="btn btn-info" (click)="editButtonClick(employee.id)">Edit</button>
+                     <button class="btn btn-danger" (click)="deleteButtonClick(employee.id)" style="margin-left: 10px">Delete</button>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
