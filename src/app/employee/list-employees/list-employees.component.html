@@ -7,7 +7,8 @@
     <div class="form-group row">
         <label for="search" class="col-sm-2" style="text-align: right;">Search By Name</label>
         <div class="col-sm-6">
-          <input [(ngModel)]="searchValue"  type="text" class="form-control" />
+          <input [(ngModel)]="searchValue" placeholder="Saerch By Name"  type="text" class="form-control"
+          (ngModelChange)="onFieldChange($event)" />
         </div>
     </div>
     <table class="table table-bordered" *ngIf="employees && employees.length">

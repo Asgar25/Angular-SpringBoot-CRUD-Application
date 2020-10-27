@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { IEmployee } from '../IEmployee';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import {debounceTime, distinctUntilChanged} from "rxjs/internal/operators";
 
 @Component({
   selector: 'app-list-employees',
@@ -10,19 +12,33 @@ import { Router } from '@angular/router';
 })
 export class ListEmployeesComponent implements OnInit {
 
+  txtQueryChanged: Subject<string> = new Subject<string>();
   searchValue: string;
   employees: IEmployee[];
 
-  //records: Array<any>;
   isDesc: boolean = false;
   column: string = '';
   direction: number;
 
+
+  
   constructor(private _employeeService: EmployeeService,
-              private _router: Router) { }
+              private _router: Router) {}
 
   ngOnInit(): void {
    this.getEmployeesList();
+
+      this.txtQueryChanged
+      .pipe(debounceTime(1000))
+      .subscribe(model => {
+        this.searchValue = model;
+        console.log(model);
+        });
+
+  }
+
+  onFieldChange(query:string){
+    this.txtQueryChanged.next(query);
   }
 
   getEmployeesList(){
