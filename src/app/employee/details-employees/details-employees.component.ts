@@ -28,12 +28,6 @@ export class DetailsEmployeesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.employeeForm = this.fb.group({
-      name: [''],
-      department: [''],
-      age: ['']
-    });
-
     this.employee = new IEmployee();
 
     this.id = this.route.snapshot.params['id'];
@@ -41,26 +35,10 @@ export class DetailsEmployeesComponent implements OnInit {
     this.employeeService.getEmployee(this.id)
       .subscribe(data => {
         console.log(data)
+        this.pageTitle = 'Employee Details';
         this.employee = data;
       }, error => console.log(error));
 
-      this.route.paramMap.subscribe(params => {
-        const empId = + params.get('id');
-        if (empId) {
-          this.pageTitle = 'Details Employee';
-          this.getEmployee(empId);
-        }
-      });
-  }
-
-  getEmployee(id: number) {
-    this.employeeService.getEmployee(id).subscribe(
-      (employee: IEmployee) => {
-        this.detailsEmployee(employee);
-        this.employee = employee;
-      },
-      (err: any) => console.log(err)
-    );
   }
 
   detailsEmployee(employee: IEmployee) {
