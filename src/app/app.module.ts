@@ -13,6 +13,7 @@ import { DetailsEmployeesComponent } from './employee/details-employees/details-
 import { SearchPipe } from './employee/search.pipe';
 import { OrderrByPipe } from './employee/orderby.pipe';
 import { FormsModule } from '@angular/forms';
+import { specialPipe } from './employee/special.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     DetailsEmployeesComponent,
     SearchPipe,
-    OrderrByPipe
+    OrderrByPipe,
+    specialPipe
   ],
   imports: [
     BrowserModule,

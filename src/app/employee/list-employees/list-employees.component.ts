@@ -33,7 +33,6 @@ export class ListEmployeesComponent implements OnInit {
   }
 
   editButtonClick(emplyeeId: number) {
-    debugger;
     this._router.navigate(['/edit', emplyeeId]);
   }
 

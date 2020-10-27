@@ -31,7 +31,6 @@ export class EmployeeService {
     }
 
     addEmployee(employee: IEmployee): Observable<IEmployee> {
-        debugger;
         return this.httpClient.post<IEmployee>(this.baseUrl, employee, {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json'
@@ -41,7 +40,6 @@ export class EmployeeService {
     }
 
     updateEmployee(employee: IEmployee): Observable<void> {
-        debugger;
         return this.httpClient.put<void>(`${this.baseUrl}/${employee.id}`, employee, {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json'

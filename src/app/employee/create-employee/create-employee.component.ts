@@ -83,10 +83,9 @@ export class CreateEmployeeComponent implements OnInit {
   editEmployee(employee: IEmployee) {
     this.employeeForm.patchValue({
       name: employee.name,
-      department: [employee.department],
-      age: employee.age
+      age: employee.age,
+      department: [employee.department]
     });
-
   }
 
   logkeyValidationErrors(group: FormGroup = this.employeeForm): void {
@@ -111,37 +110,22 @@ export class CreateEmployeeComponent implements OnInit {
     });
   }
 
-  onLoadDataClick(): void {
-    //this.logkeyValidationErrors(this.employeeForm);
-    //console.log(this.formErrors);
-    
-  }
-
   onSubmit() {
-    debugger;
     this.mapFormValuesToEmployeeModel();
     if (this.employee.id) {
-      debugger
       this.employeeService.updateEmployee(this.employee).subscribe(
         () => this.router.navigate(['list']),
         (err: any) => console.log(err)
       );    
     } else {
-      debugger;
       this.employeeService.addEmployee(this.employee).subscribe(
         () => this.router.navigate(['list']),
         (err: any) => console.log(err)
       );  
     }
-   /*  console.log(this.employeeForm.touched);
-    console.log(this.employeeForm.valid);
-    console.log(this.employeeForm.value);
-    console.log(this.employeeForm.controls.fullName.touched);
-    console.log(this.employeeForm.get('fullName').value); */
   }
 
   mapFormValuesToEmployeeModel() {
-    debugger;
     this.employee.name = this.employeeForm.value.name;
     this.employee.department = this.employeeForm.value.department[0];
     this.employee.age = this.employeeForm.value.age;
@@ -168,6 +152,6 @@ export class CreateEmployeeComponent implements OnInit {
   getdeptFormControls(): AbstractControl[] {
     return (<FormArray> this.employeeForm.get('department')).controls
   }
-  
+
 }
 
